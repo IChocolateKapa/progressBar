@@ -1,12 +1,6 @@
 /**
  * Created by Echo on 2015/10/23.
  */
-$(function(){
-    progressBar.initProgressBar($("#pv1"), {name:　"总进度", backgroundColor: "#5cb85c", percentage: 90, striped: true});
-    progressBar.initProgressBar($("#pv2"), {name:　"子项目1进度", backgroundColor: "#f0ad4e", percentage: 40});
-    progressBar.initProgressBar($("#pv3"), {name:　"子项目2进度", backgroundColor: "#d9534f", percentage: 20});
-});
-
 var progressBar = {
     initProgressBar: function($ele, cfg){
         this.cfg = {
@@ -31,9 +25,9 @@ var progressBar = {
         var percent = this.cfg.percentage;
         var backColor = this.cfg.backgroundColor;
 
-        if($("html").find("head").html().indexOf("css/progressBar.css") == -1){
+        /*if($("html").find("head").html().indexOf("css/progressBar.css") == -1){
             $("head").prepend("<link rel=\"stylesheet\" href=\"css/progressBar.css\"/>");
-        }
+        }*/
 
 
         var contentHTML = "<div class=\"progress\">"
