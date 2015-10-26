@@ -8,9 +8,11 @@
     <script src="progressBar.js"></script>
     <script>
         $(function(){
-            progressBar.initProgressBar($("#pv1"), {name:　"总进度", backgroundColor: "#5cb85c", percentage: 90, striped: true});
+            progressBar.initProgressBar($("#pv1"), {name:　"总进度", backgroundColor: "#5cb85c", percentage: 50, striped: true});
             progressBar.initProgressBar($("#pv2"), {name:　"子项目1进度", backgroundColor: "#f0ad4e", percentage: 40});
             progressBar.initProgressBar($("#pv3"), {name:　"子项目2进度", backgroundColor: "#d9534f", percentage: 20});
+            progressBar.initProgressBar($("#pv4"), {name:　"子项目3进度", backgroundColor: "#d9534f", percentage: 20, linear: {show: true,theme: "green"}});
+            progressBar.initProgressBar($("#pv5"), {name:　"子项目4进度", backgroundColor: "#d9534f", percentage: 80, linear: {show: true,theme: "blue"}});
         });
     </script>
 </head>
@@ -19,6 +21,8 @@
     <div id="pv1" class="progressGroup progress-parent"></div>
     <div id="pv2" class="progressGroup progress-child1"></div>
     <div id="pv3" class="progressGroup progress-child2"></div>
+    <div id="pv4" class="progressGroup progress-child1"></div>
+    <div id="pv5" class="progressGroup progress-child1"></div>
 </div>
 </body>
 </html>

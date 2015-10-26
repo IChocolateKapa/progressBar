@@ -15,6 +15,10 @@ var progressBar = {
             width: "100%",
             backgroundColor: "#337ab7",
             striped: false,
+            linear: {
+                show: false,
+                theme: "blue"
+            },
             name: "root",
             percentage: 0
         };
@@ -45,6 +49,9 @@ var progressBar = {
         $ele.html(contentHTML);
         if(this.cfg.striped){
             $ele.find(".progress-bar").addClass("progress-bar-striped");
+        }
+        if(this.cfg.linear.show){
+            $ele.find(".progress-bar").addClass("progress-bar-linear-"+this.cfg.linear.theme);
         }
         setTimeout(function(){
             $ele.find(".progress-bar").css({"background-color": backColor})

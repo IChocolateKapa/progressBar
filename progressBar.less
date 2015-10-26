@@ -23,7 +23,7 @@
 @progressHeight: 25px;
 .progress-title{
   //flex: 1;
-  width: 200px;
+  width: 150px;
   background: rgba(0,0,0,0.2);
   height: @progressHeight;
   text-align: center;
@@ -48,15 +48,28 @@
   text-align: left;
   text-indent: 20px;
   background-color: #337ab7;
+  border-radius: 4px;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
   -webkit-transition: width .6s ease;
   -o-transition: width .6s ease;
   transition: width .6s ease;
+  span{
+    white-space: nowrap;
+  }
 }
 .progress-bar-striped{
   background-size: 40px 40px;
   background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+}
+.progress-bar-linear{
+  background-image: linear-gradient(to right, #0B3F6B, #63B8FF);
+}
+.progress-bar-linear-blue{
+  background-image: linear-gradient(to right, #0B3F6B, #63B8FF);
+}
+.progress-bar-linear-green{
+  background-image: linear-gradient(to right, #5cb85c, #B5B804);
 }
 .progress-bar-warn{
   background-color: #f0ad4e;
