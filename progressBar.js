@@ -29,9 +29,9 @@ var progressBar = {
         var percent = this.cfg.percentage;
         var backColor = this.cfg.backgroundColor;
 
-        /*if($("html").find("head").html().indexOf("css/progressBar.css") == -1){
+        if($("html").find("head").html().indexOf("css/progressBar.css") == -1){
             $("head").prepend("<link rel=\"stylesheet\" href=\"css/progressBar.css\"/>");
-        }*/
+        }
 
 
         var contentHTML = "<div class=\"progress\">"
