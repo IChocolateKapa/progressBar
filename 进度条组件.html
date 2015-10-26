@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>进度条组件</title>
+    <link rel="stylesheet" href="css/progressBar.css"/>
     <script src="jquery-2.1.3.min.js"></script>
     <script src="progressBar.js"></script>
     <script>
         $(function(){
-            progressBar.initProgressBar($("#pv1"), {name:　"总进度", backgroundColor: "#5cb85c", percentage: 50, striped: true});
-            progressBar.initProgressBar($("#pv2"), {name:　"子项目1进度", backgroundColor: "#f0ad4e", percentage: 40});
-            progressBar.initProgressBar($("#pv3"), {name:　"子项目2进度", backgroundColor: "#d9534f", percentage: 20});
-            progressBar.initProgressBar($("#pv4"), {name:　"子项目3进度", backgroundColor: "#d9534f", percentage: 20, linear: {show: true,theme: "green"}});
-            progressBar.initProgressBar($("#pv5"), {name:　"子项目4进度", backgroundColor: "#d9534f", percentage: 80, linear: {show: true,theme: "blue"}});
+            progressBar.initProgressBar($("#pv1"), {name:　"总进度", barColor: "#5cb85c", percentage: 50, striped: true});
+            progressBar.initProgressBar($("#pv2"), {name:　"子项目1进度", barColor: "#f0ad4e", progressBackground: {background: "white", border: "1px solid #f0ad4e", "boxShadow": "none"}, percentage: 40});
+            progressBar.initProgressBar($("#pv3"), {name:　"子项目2进度", barColor: "#d9534f", percentage: 20});
+            progressBar.initProgressBar($("#pv4"), {name:　"子项目3进度", barColor: "#d9534f", percentage: 20, linear: {show: true,theme: "green"}});
+            progressBar.initProgressBar($("#pv5"), {name:　"子项目4进度", barColor: "#d9534f", percentage: 80, linear: {show: true,theme: "blue"}});
         });
     </script>
 </head>

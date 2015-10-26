@@ -13,7 +13,12 @@ var progressBar = {
             },
             height: '25',
             width: "100%",
-            backgroundColor: "#337ab7",
+            progressBackground: {
+                "background": "#545253",
+                "border": "1px solid #fff"
+            },
+            barColor: "#337ab7",
+            border: "",
             striped: false,
             linear: {
                 show: false,
@@ -27,11 +32,11 @@ var progressBar = {
 
 
         var percent = this.cfg.percentage;
-        var backColor = this.cfg.backgroundColor;
+        var barColor = this.cfg.barColor;
 
-        if($("html").find("head").html().indexOf("css/progressBar.css") == -1){
+        /*if($("html").find("head").html().indexOf("css/progressBar.css") == -1){
             $("head").prepend("<link rel=\"stylesheet\" href=\"css/progressBar.css\"/>");
-        }
+        }*/
 
 
         var contentHTML = "<div class=\"progress\">"
@@ -47,6 +52,13 @@ var progressBar = {
         }
         $ele.empty();
         $ele.html(contentHTML);
+        if(this.cfg.progressBackground){
+            var backColor = this.cfg.progressBackground.background;
+            var backBorder = this.cfg.progressBackground.border;
+            var boxShadow = this.cfg.progressBackground.boxShadow;
+            $ele.find(".progress").css({'background-color': backColor, "border": backBorder, "box-shadow": boxShadow, "-webkit-box-shadow": boxShadow});
+        }
+
         if(this.cfg.striped){
             $ele.find(".progress-bar").addClass("progress-bar-striped");
         }
@@ -54,7 +66,7 @@ var progressBar = {
             $ele.find(".progress-bar").addClass("progress-bar-linear-"+this.cfg.linear.theme);
         }
         setTimeout(function(){
-            $ele.find(".progress-bar").css({"background-color": backColor})
+            $ele.find(".progress-bar").css({"background-color": barColor})
                                         .animate({'width': percent +"%"});
         }, 50);
     }
